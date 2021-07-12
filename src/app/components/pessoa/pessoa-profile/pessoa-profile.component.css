@@ -1,0 +1,83 @@
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+.badge{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.badge button{
+    width: 15%;
+}
+
+.content{
+    width: 100%;
+    
+}
+
+.novo-registro{
+    width: 100%;
+    margin-top: 3rem;
+    font-weight: 600;
+    color: rgb(114, 111, 111);
+}
+
+mat-card{
+    margin-top: .8rem;
+    padding: .2rem;
+}
+
+mat-card-header{
+   padding-top: 1.3rem;
+}
+
+p{
+    text-align: end;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 0;
+}
+
+.actions{
+    text-align: end;
+}
+
+.actions button{
+    margin: .5rem;
+} 
+
+.orange{
+    background-color: orange;
+    color: white;
+}
+.green{
+    background-color: green;
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    justify-content: center;
+    color: rgb(43, 46, 43);
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+mat-card:last-child {
+    margin-bottom: 4rem;
+  } 
+  
+  .espacamento{
+  padding-bottom: 2rem;
+  }
+
+  
+.data-nascimento{
+    color: rgb(58, 55, 55);
+   
+}

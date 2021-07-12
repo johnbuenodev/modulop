@@ -1,0 +1,31 @@
+<div class="badge">
+  <button (click)="cancelarVoltar()" mat-stroked-button color="primary" >Voltar</button>
+ </div>
+<form>
+   
+    <h1> NOVO PROFILE</h1>
+    <mat-form-field class="data-nascimento" appearance="fill">
+      <mat-label>DATA DE NASCIMENTO</mat-label>
+      <input [(ngModel)]="pessoa.dataNascimento" name="pessoa.dataNascimento" matInput required [matDatepicker]="dp3" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+  
+    <div class="formClass">
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>NOME</mat-label>
+        <input [(ngModel)]="pessoa.nome" name="pessoa.nome" matInput required  maxlength="80" placeholder="Digite o nome">
+      </mat-form-field>
+    
+      <mat-form-field class="formField" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input [(ngModel)]="pessoa.cpf" name="pessoa.cpf" matInput required  placeholder="Inserir somente os 11 digitos">
+      </mat-form-field>
+    </div>
+    <div class="buttons">
+      <button (click)="cancelarVoltar()" mat-stroked-button color="warn">CANCELAR</button>
+      <button (click)="criarCadastro()" mat-stroked-button color="primary">SALVAR</button>  
+    </div>
+  
+  </form>
+  

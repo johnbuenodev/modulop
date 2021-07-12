@@ -1,0 +1,32 @@
+   <div class="badge">
+    <button (click)="cancelarVoltar()" mat-stroked-button color="primary" >Voltar</button>
+   </div>
+  <form >
+     
+      <h1> NOVO CONTATO </h1>
+    
+      <div class="formClass">
+        <mat-form-field class="formField form-group" appearance="fill">
+          <mat-label>NOME</mat-label>
+          <input [(ngModel)]="contato.nome" name="contato.nome" matInput required maxlength="80" placeholder="Informe o nome">
+        </mat-form-field>
+      
+        <mat-form-field class="formField form-group" appearance="fill">
+          <mat-label>TELEFONE</mat-label>
+          <input  [(ngModel)]="contato.telefone" type="tel" name="contato.telefone" matInput required maxlength="8" placeholder="Informe o telefone">
+        </mat-form-field>
+
+        <mat-form-field class="formField form-group" appearance="fill">
+            <mat-label>EMAIL</mat-label>
+            <input [(ngModel)]="contato.email"  name="contato.email" type="email" matInput required  email="true" placeholder="Informe o Email">
+          </mat-form-field>
+
+
+      </div>
+      <div class="buttons">
+        <button (click)="cancelarVoltar()" mat-stroked-button color="warn">CANCELAR</button>
+        <button (click)="criarContato()" mat-stroked-button color="primary" >SALVAR</button>
+      </div>
+    
+    </form>
+ 

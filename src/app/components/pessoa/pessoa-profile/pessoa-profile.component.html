@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="badge">
+     <button (click)="voltarNav()" mat-stroked-button color="primary" >Voltar</button>
+    </div>
+    <h1 class="titulo">PROFILE</h1>
+
+    <div class="content" >
+        <mat-card class="mat-elevation-z8" >
+            <p class="data-nascimento">Data de Nascimento: {{pessoa.dataNascimento}}</p>
+            <mat-card-header>
+              <mat-card-title>{{pessoa.nome}}</mat-card-title>
+              <mat-card-subtitle>{{pessoa.cpf}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="actions">
+                  <button (click)="editar(pessoa)" mat-mini-fab class="orange">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+            </div>
+          </mat-card>
+    </div>
+    <div class="espacamento"></div>
+    <h1 class="titulo">CONTATOS DO PROFILE</h1>
+    <button (click)="novoContato()" class="novo-contato mat-elevation-z8" mat-stroked-button color="primary">ADD NOVO CONTATO</button>
+
+    <div class="content">
+      <mat-card class="mat-elevation-z8" *ngFor="let contato of contatoList">
+          <mat-card-header>
+            <mat-card-title>Nome: {{contato.nome}}</mat-card-title>
+            <mat-card-subtitle>Telefone: {{contato.telefone}}</mat-card-subtitle>
+            <mat-card-subtitle>E-mail: {{contato.email}}</mat-card-subtitle>
+          </mat-card-header>
+          <div class="actions">
+            <button (click)="editarContato(contato)" mat-mini-fab class="orange">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button (click)="deletarContato(contato.id)" mat-mini-fab color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>  
+          </div>
+        </mat-card>
+  </div>
+  <div class="espacamento"></div>
+</div>
