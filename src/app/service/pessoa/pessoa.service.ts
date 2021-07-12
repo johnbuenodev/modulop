@@ -19,7 +19,7 @@ export class PessoaService {
   constructor(private http: HttpClient, private snack: MatSnackBar) {}
 
   findAll(): Observable<Pessoa[]>{
-    const url = environment.baseUrl + '/';
+    const url = `${this.baseUrl}/`;
     return this.http.get<Pessoa[]>(url, httpOptions);
   
   }

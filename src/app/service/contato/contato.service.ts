@@ -19,7 +19,8 @@ export class ContatoService {
   constructor(private http: HttpClient, private snack: MatSnackBar) {}
 
   findAll(): Observable<Contato[]>{
-    const url = environment.baseUrl + '/';
+    
+    const url = `${this.baseUrl} + '/'`;
     return this.http.get<Contato[]>(url, httpOptions);
   
   }
